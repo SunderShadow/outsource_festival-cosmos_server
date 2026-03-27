@@ -1,0 +1,16 @@
+.fields-cropper-container img {
+    aspect-ratio: var(--cropper-width) / var(--cropper-height);
+}
+
+.cropper-actions .float-start {
+    display: none;
+}
+
+input[type=range]::before {
+    content: attr(min);
+    margin-right: 10px;
+}
+input[type=range]::after {
+    content: attr(max);
+    margin-left: 10px;
+}
