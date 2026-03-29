@@ -89,7 +89,7 @@ class EditMealScreen extends Screen
             'name' => $request->input('meal.name'),
             'chef_name' => $request->input('meal.chef_name'),
             'card_thumbnail' => $request->input('meal.card_thumbnail'),
-            'cost' => (float) substr($request->input('meal.cost'), 2),
+            'cost' => $request->input('meal.cost'),
             'description' => $request->input('meal.description'),
         ]);
 
