@@ -29,7 +29,7 @@ class MealEditTextLayout extends Rows
                 ->title(__('Стоимость (руб)'))
                 ->type('text')
                 ->required()
-                ->placeholder(__('$ 0.00'))
+                ->placeholder(__('2000 руб'))
         ];
     }
 }
