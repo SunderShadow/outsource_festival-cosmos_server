@@ -2,6 +2,7 @@
 
 namespace App\Orchid\Screens\Restaurants\Meal;
 
+use App\Models\Meal;
 use App\Models\Restaurant;
 use App\Orchid\Layouts\Restaurants\Meal\MealListLayout;
 use App\Orchid\Layouts\Restaurants\RestaurantNavigation;
@@ -73,6 +74,13 @@ class ListMealScreen extends Screen
         ];
     }
 
+
+    public function delete($id) {
+        $news = Meal::whereId($id)->first();
+        $news->delete();
+
+        Toast::success("Сет \"{$news->title}\" удален");
+    }
 
     public function create(Request $request)
     {
