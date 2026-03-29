@@ -5,7 +5,16 @@ use App\Models\Restaurant;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/restaurants', function () {
-    return response()->json(Restaurant::wherePublished(true)->get());
+    return response()->json(
+        Restaurant::query()
+        ->select(['slug', 'min_cost', 'thumbnail_card', 'location', 'title'])
+        ->wherePublished(true)
+        ->get()
+        ->makeHidden([
+            'rating',
+            'working_time'
+        ])
+    );
 });
 
 Route::get('/restaurants/search/{query}', function (string $query) {
