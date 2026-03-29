@@ -26,16 +26,8 @@ class MealEditTextLayout extends Rows
                 ->placeholder('Спагетти с сыром')
                 ->required(),
             Input::make('meal.cost')
-                ->title(__('Стоимость ($)'))
+                ->title(__('Стоимость (руб)'))
                 ->type('text')
-                ->mask([
-                    'alias' => 'currency',
-                    'prefix' => '$ ',        // Change to your currency symbol
-                    'groupSeparator' => ',', // Thousands separator
-                    'digits' => 2,           // Decimal places
-                    'digitsOptional' => false,
-                    'rightAlign' => false,
-                ])
                 ->required()
                 ->placeholder(__('$ 0.00'))
         ];
