@@ -25,8 +25,6 @@ class ListMealScreen extends Screen
      */
     public function query(Restaurant $restaurant): iterable
     {
-        $restaurant = Restaurant::with('meals')->find($restaurant)->first();
-
         return [
             'restaurant' => $restaurant,
             'meals' => $restaurant->meals
@@ -52,7 +50,7 @@ class ListMealScreen extends Screen
     {
         return [
             Link::make('Добавить')
-                ->route('platform.restaurants.meal.create', ['restaurant' => $this->restaurant])
+                ->route('platform.restaurants.meal.create', ['restaurant' => $this->restaurant->id])
                 ->icon('plus-circle'),
         ];
     }
@@ -72,10 +70,10 @@ class ListMealScreen extends Screen
 
 
     public function delete($id) {
-        $news = Meal::whereId($id)->first();
-        $news->delete();
+        $meal = Meal::whereId($id)->first();
+        $meal->delete();
 
-        Toast::success("Сет \"{$news->title}\" удален");
+        Toast::success("Сет \"{$meal->title}\" удален");
     }
 
     public function create(Request $request)
