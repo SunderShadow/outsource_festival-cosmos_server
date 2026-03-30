@@ -36,9 +36,11 @@
     32 => 'Orchid\\Icons\\IconServiceProvider',
     33 => 'Orchid\\Platform\\Providers\\FoundationServiceProvider',
     34 => 'Pest\\Laravel\\PestServiceProvider',
-    35 => 'Tabuna\\Breadcrumbs\\BreadcrumbsServiceProvider',
-    36 => 'Watson\\Active\\ActiveServiceProvider',
-    37 => 'App\\Providers\\AppServiceProvider',
+    35 => 'Spatie\\Backup\\BackupServiceProvider',
+    36 => 'Spatie\\SignalAwareCommand\\SignalAwareCommandServiceProvider',
+    37 => 'Tabuna\\Breadcrumbs\\BreadcrumbsServiceProvider',
+    38 => 'Watson\\Active\\ActiveServiceProvider',
+    39 => 'App\\Providers\\AppServiceProvider',
   ),
   'eager' => 
   array (
@@ -61,9 +63,11 @@
     16 => 'Orchid\\Icons\\IconServiceProvider',
     17 => 'Orchid\\Platform\\Providers\\FoundationServiceProvider',
     18 => 'Pest\\Laravel\\PestServiceProvider',
-    19 => 'Tabuna\\Breadcrumbs\\BreadcrumbsServiceProvider',
-    20 => 'Watson\\Active\\ActiveServiceProvider',
-    21 => 'App\\Providers\\AppServiceProvider',
+    19 => 'Spatie\\Backup\\BackupServiceProvider',
+    20 => 'Spatie\\SignalAwareCommand\\SignalAwareCommandServiceProvider',
+    21 => 'Tabuna\\Breadcrumbs\\BreadcrumbsServiceProvider',
+    22 => 'Watson\\Active\\ActiveServiceProvider',
+    23 => 'App\\Providers\\AppServiceProvider',
   ),
   'deferred' => 
   array (

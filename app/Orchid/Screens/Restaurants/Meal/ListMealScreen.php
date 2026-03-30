@@ -8,7 +8,6 @@ use App\Orchid\Layouts\Restaurants\Meal\MealListLayout;
 use App\Orchid\Layouts\Restaurants\RestaurantNavigation;
 use Illuminate\Http\Request;
 use Orchid\Screen\Action;
-use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Layout;
 use Orchid\Screen\Screen;
@@ -18,9 +17,6 @@ class ListMealScreen extends Screen
 {
     /** @var Restaurant */
     public $restaurant;
-
-    /** @var string */
-    public $subpath;
 
     /**
      * Fetch data to be displayed on the screen.
