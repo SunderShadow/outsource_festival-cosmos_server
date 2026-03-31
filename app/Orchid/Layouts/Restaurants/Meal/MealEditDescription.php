@@ -18,7 +18,7 @@ class MealEditDescription extends Rows
         return [
             TextArea::make('meal.description')
                 ->title(__('Описание'))
-                ->rows(5)
+                ->rows(20)
                 ->required()
         ];
     }

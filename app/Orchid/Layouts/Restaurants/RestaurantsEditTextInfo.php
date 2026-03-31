@@ -26,6 +26,9 @@ class RestaurantsEditTextInfo extends Rows
     protected function fields(): iterable
     {
         return [
+            Input::make('restaurant.city')
+                ->placeholder(__(''))
+                ->title(__('Город')),
             Input::make('restaurant.title')
                 ->placeholder(__(''))
                 ->required()

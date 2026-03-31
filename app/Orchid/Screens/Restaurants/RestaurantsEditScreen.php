@@ -138,6 +138,7 @@ class RestaurantsEditScreen extends Screen
             'min_cost' => $request->input('restaurant.min_cost'),
             'map_link' => $request->input('restaurant.map_link'),
             'location' => $request->input('restaurant.location'),
+            'city' => $request->input('restaurant.city'),
             'external_website_link' => $request->input('restaurant.external_website_link'),
             'description' => $request->input('restaurant.description'),
 

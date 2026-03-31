@@ -82,6 +82,7 @@ class RestaurantsCreateScreen extends Screen
             'phone' => $request->input('restaurant.phone'),
             'min_cost' => $request->input('restaurant.min_cost'),
             'location' => $request->input('restaurant.location'),
+            'city' => $request->input('restaurant.city'),
             'chef_name' => $request->input('restaurant.chef_name'),
             'map_link' => $request->input('restaurant.map_link'),
             'external_website_link' => $request->input('restaurant.map_link'),

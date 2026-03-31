@@ -17,9 +17,11 @@ Route::get('/restaurants', function () {
     );
 });
 
-Route::get('/restaurants/search/{query}', function (string $query) {
-    return response()->json(Restaurant::wherePublished(true)->whereLike('title', "%$query%")->get());
+Route::get('/restaurants/cities', function () {
+    return response()->json(Restaurant::wherePublished(true)->where('city', '!=', 'null')->get(['city'])->collect()->unique('city')->pluck('city'));
 });
+
+
 
 Route::get('/restaurants/{restaurant}', function (string $restaurant) {
     return response()->json(Restaurant::with('meals')->published()->whereSlug($restaurant)->firstOrFail());
