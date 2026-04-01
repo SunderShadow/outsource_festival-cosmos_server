@@ -123,6 +123,7 @@ class RestaurantsEditScreen extends Screen
             'thumbnail_mobile' => $request->input('restaurant.thumbnail_mobile'),
             'thumbnail_desktop' => $request->input('restaurant.thumbnail_desktop'),
             'thumbnail_card' => $request->input('restaurant.thumbnail_card'),
+            'thumbnail_chef' => $request->input('restaurant.thumbnail_chef'),
         ]);
 
         Toast::success('Изображения сохранены');

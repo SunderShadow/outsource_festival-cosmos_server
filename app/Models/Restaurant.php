@@ -65,6 +65,10 @@ use Orchid\Screen\AsSource;
  * @method static Builder<static>|Restaurant whereTitle($value)
  * @method static Builder<static>|Restaurant whereUpdatedAt($value)
  * @method static Builder<static>|Restaurant whereVerified($value)
+ * @property string|null $city
+ * @property string|null $thumbnail_chef
+ * @method static Builder<static>|Restaurant whereCity($value)
+ * @method static Builder<static>|Restaurant whereThumbnailChef($value)
  * @mixin \Eloquent
  */
 class Restaurant extends Model
@@ -115,7 +119,8 @@ class Restaurant extends Model
         return Attribute::get(fn ($v) => [
             'desktop' => config('app.url') . $this->thumbnail_desktop,
             'mobile' => config('app.url') . $this->thumbnail_mobile,
-            'card' => config('app.url') . $this->thumbnail_card
+            'card' => config('app.url') . $this->thumbnail_card,
+            'chef' => config('app.url') . $this->thumbnail_chef
         ]);
     }
 

@@ -26,20 +26,26 @@ class RestaurantsEditImagesLayout extends Rows
         return [
             Group::make([
                 Cropper::make('restaurant.thumbnail_mobile')
-                    ->title(__('Изображение - для телефонов'))
-                    ->width(346)
-                    ->height(472)
+                    ->title(__('Изображение - для т елефонов'))
+                    ->width(748)
+                    ->height(1024)
                     ->targetRelativeUrl(),
                 Cropper::make('restaurant.thumbnail_card')
                     ->title(__('Изображение - для карточки'))
-                    ->width(145)
-                    ->height(154)
+                    ->width(160)
+                    ->height(160)
                     ->targetRelativeUrl()
             ]),
+            Cropper::make('restaurant.thumbnail_chef')
+                ->title(__('Изображение Шефа'))
+                ->width(300)
+                ->height(300)
+                ->accept('image/*')
+                ->targetRelativeUrl(),
             Cropper::make('restaurant.thumbnail_desktop')
                 ->title(__('Изображение для ПК'))
-                ->width(617)
-                ->height(793)
+                ->width(738)
+                ->height(1028)
                 ->accept('image/*')
                 ->targetRelativeUrl(),
         ];
