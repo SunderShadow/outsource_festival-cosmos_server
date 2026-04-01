@@ -21,8 +21,8 @@ class MealEditImageLayout extends Rows
             Group::make([
                 Cropper::make('meal.thumbnail')
                     ->title(__('Изображение'))
-                    ->width(150)
-                    ->height(150)
+                    ->width(1000)
+                    ->height(1000)
                     ->accept('image/*')
                     ->required()
                     ->targetRelativeUrl(),

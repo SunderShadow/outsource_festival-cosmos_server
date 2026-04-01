@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/restaurants', function () {
     return response()->json(
         Restaurant::query()
-        ->select(['slug', 'min_cost', 'thumbnail_card', 'location', 'title'])
+        ->select(['slug', 'min_cost', 'thumbnail_card', 'location', 'title', 'city'])
         ->wherePublished(true)
         ->get()
         ->makeHidden([
