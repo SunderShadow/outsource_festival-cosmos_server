@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ContestUsersExport;
 use App\Http\Requests\UserContest\RegisterRequest;
-use App\Models\ContestUsers;
+use App\Models\ContestUser;
 use Illuminate\Http\JsonResponse;
+use Maatwebsite\Excel\Excel;
 
 class ContestUserController extends Controller
 {
@@ -15,9 +17,14 @@ class ContestUserController extends Controller
      */
     public function register(RegisterRequest $request): JsonResponse
     {
-        ContestUsers::create($request->validated());
+        ContestUser::create($request->validated());
         return response()->json([
             'message' => 'Регистрация прошла успешно'
         ]);
+    }
+
+    public function getXML(Excel $excel)
+    {
+        return $excel->download(new ContestUsersExport(), 'users.xlsx');
     }
 }

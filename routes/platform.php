@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Orchid\Screens\ContestUsers\ContestUsersListScreen;
 use App\Orchid\Screens\News\NewsCreateScreen;
 use App\Orchid\Screens\News\NewsEditScreen;
 use App\Orchid\Screens\News\NewsListScreen;
@@ -36,6 +37,9 @@ Route::screen('/main', PlatformScreen::class)
 // Platform > News > List
 Route::screen('/news', NewsListScreen::class)
     ->name('platform.news');
+
+Route::screen('/contest-users', ContestUsersListScreen::class)
+    ->name('platform.contest-users');
 
 // Platform > News > Create
 Route::screen('/news/create', NewsCreateScreen::class)

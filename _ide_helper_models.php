@@ -13,9 +13,9 @@
 
 namespace App\Models{
 /**
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser query()
  * @mixin \Eloquent
  * @property int $id
  * @property string $uid Not uuid
@@ -25,14 +25,14 @@ namespace App\Models{
  * @property string $city
  * @property string $review
  * @property int $restaurant_id
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers whereCity($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers whereFullName($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers wherePhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers whereRestaurantId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers whereReview($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUsers whereUid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser whereCity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser whereFullName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser whereRestaurantId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser whereReview($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ContestUser whereUid($value)
  */
 	class ContestUsers extends \Eloquent {}
 }

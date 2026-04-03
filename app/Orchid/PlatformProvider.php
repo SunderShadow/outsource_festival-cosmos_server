@@ -43,6 +43,11 @@ class PlatformProvider extends OrchidServiceProvider
                 ->icon('bs.fork-knife')
                 ->route('platform.restaurants'),
 
+            Menu::make(__('Участники акции'))
+                ->icon('bs.people')
+                ->route('platform.contest-users')
+                ->title(__('Акция')),
+
             Menu::make(__('Users'))
                 ->icon('bs.people')
                 ->route('platform.systems.users')

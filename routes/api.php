@@ -4,6 +4,8 @@ use App\Http\Controllers\ContestUserController;
 use App\Models\Restaurant;
 
 Route::post('/contest/register', [ContestUserController::class, 'register']);
+Route::post('/contest/get-xml', [ContestUserController::class, 'getXML'])->name('contest-users.get-xml');
+
 Route::get('/restaurants/id-names', function () {
     return Restaurant::all(['id', 'title']);
 });
