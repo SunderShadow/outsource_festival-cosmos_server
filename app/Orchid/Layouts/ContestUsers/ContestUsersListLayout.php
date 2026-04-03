@@ -32,17 +32,11 @@ class ContestUsersListLayout extends Table
     {
         return [
             TD::make('uid', __('ID'))
-                ->cantHide(),
             TD::make('full_name', __('ФИО'))
-                ->cantHide(),
             TD::make('phone', __('Телефон'))
-                ->cantHide(),
             TD::make('email', __('e-mail'))
-                ->cantHide(),
             TD::make('city', __('Город'))
-                ->cantHide(),
             TD::make('restaurant', __('Ресторан'))
-                ->cantHide()
                 ->render(function (ContestUser $user) {
                     return $user->restaurant->title;
                 }),
