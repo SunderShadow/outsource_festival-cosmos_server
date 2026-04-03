@@ -31,11 +31,11 @@ class ContestUsersListLayout extends Table
     protected function columns(): iterable
     {
         return [
-            TD::make('uid', __('ID'))
-            TD::make('full_name', __('ФИО'))
-            TD::make('phone', __('Телефон'))
-            TD::make('email', __('e-mail'))
-            TD::make('city', __('Город'))
+            TD::make('uid', __('ID')),
+            TD::make('full_name', __('ФИО')),
+            TD::make('phone', __('Телефон')),
+            TD::make('email', __('e-mail')),
+            TD::make('city', __('Город')),
             TD::make('restaurant', __('Ресторан'))
                 ->render(function (ContestUser $user) {
                     return $user->restaurant->title;
