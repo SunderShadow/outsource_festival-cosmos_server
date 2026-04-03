@@ -28,7 +28,7 @@ class ContestUsersListScreen extends Screen
      */
     public function name(): ?string
     {
-        return __('Рестораны');
+        return __('Участники акции');
     }
 
     /**
@@ -40,8 +40,9 @@ class ContestUsersListScreen extends Screen
     {
         return [
             Button::make('Выгрузка XML')
+                ->icon('bs.file-earmark-arrow-down')
                 ->route('contest-users.get-xml')
-                ->icon('bs.plus-circle'),
+                ->download(),
         ];
     }
 
