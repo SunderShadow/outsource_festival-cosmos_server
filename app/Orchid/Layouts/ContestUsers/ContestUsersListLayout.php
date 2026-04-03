@@ -45,7 +45,8 @@ class ContestUsersListLayout extends Table
                 ->cantHide()
                 ->render(function (ContestUser $user) {
                     return $user->restaurant->title;
-                })
+                }),
+            TD::make('review', __('Отзыв'))
         ];
     }
 }
